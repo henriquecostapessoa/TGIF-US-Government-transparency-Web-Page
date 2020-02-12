@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>House</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="congress.css">
+    </head>
+    
+    <body class="w-100 p-3">
+
+      <div class="fixed-top">
+
+      <header>            
+        <div class="beforenavbar">
+          <img src="1055px-Seal_of_the_United_States_Congress.svg.png" alt="Trulli" width="100" height="100">
+          <a style="font-family: serif;" id="general-email" href="mailto:info@tgif.net">info@tgif.net</a> 
+        </div>
+      </header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(165, 91, 42)">
+        <div style="font-family: serif;" class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></liclass="nav-item active>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Congress 113</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul >
+                  <li><a class="dropdown-item" href="senate-data.html">Senate</a></li>
+                  <li><a class="dropdown-item" href="house-data.html">House</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attendance</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul >
+                  <li><a class="dropdown-item" href="senate_attendance.html">Senate</a></li>
+                  <li><a class="dropdown-item" href="house_attendance.html">House</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul >
+                  <li><a class="dropdown-item" href="senate_party-loyalty.html">Senate</a></li>
+                  <li><a class="dropdown-item" href="house_party-loyalty.html">House</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>  
+    </div>   
+
+            <!--Table container-->
+            <div class="mt-150"></div>
+            <div class="container--">
+              <div class="row">
+                <div class="col-8">
+                  <div class="text">
+                    <h2>Congressmen</h2>
+                      <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                      <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+                    </div>
+                  </div>
+                  <div class="col-4">      
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <label style="font-family: serif;">Filter by Party:</label>
+                <form>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="party" id="inlineCheckbox1" value="R">
+                    <label style="font-family: serif;" class="form-check-label" for="inlineCheckbox1">Republican</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="party" id="inlineCheckbox2" value="D">
+                    <label style="font-family: serif;" class="form-check-label" for="inlineCheckbox2">Democrat</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="party" id="inlineCheckbox3" value="I">
+                    <label style="font-family: serif;" class="form-check-label" for="inlineCheckbox3">Independent</label>
+                  </div>
+                </form>
+              </div>
+              <div class="col-4">
+                <label style="font-family: serif;">Filter by State:</label>
+                <select style="font-family: serif;" id="states" class="custom-select custom-select-sm">
+                  <option selected>All</option>
+                </select>
+              </div>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-family: serif;">
+                        <th>Name</th>
+                        <th>Party</th>
+                        <th>State</th>
+                        <th>Years in Office</th>
+                        <th>% Votes w/Party</th>
+                    </tr>
+                </thead>
+                <tbody style="font-family: serif;" id= "table-body2">   
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2020  | All Rights Reserved</p>
+      </footer>
+       
+        <script src="house.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+      </body>
+</html>
